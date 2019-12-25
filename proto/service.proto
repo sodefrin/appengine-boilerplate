@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+service AppengineBoilerplate {
+  rpc Healthz(google.protobuf.Empty)
+  returns (HealthzResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/healthz"
+    };
+  }
+}
+
+message HealthzResponse {
+}
