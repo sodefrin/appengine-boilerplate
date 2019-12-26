@@ -1,0 +1,36 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "proto/service.proto",
+    "version": "version not set"
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/healthz": {
+      "get": {
+        "operationId": "Healthz",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/protoHealthzResponse"
+            }
+          }
+        },
+        "tags": [
+          "AppengineBoilerplate"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protoHealthzResponse": {
+      "type": "object"
+    }
+  }
+}
