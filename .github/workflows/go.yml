@@ -32,6 +32,6 @@ jobs:
 
     - name: Build
       run: |
-        go get -u github.com:sodefrin/archi-checker
+        go get -u github.com/sodefrin/archi-checker
         archi-checker -s $(go list ./... )
       
