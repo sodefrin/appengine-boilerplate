@@ -1,10 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/sodefrin/appengine-boilerplate/app"
 	"github.com/sodefrin/appengine-boilerplate/log"
+	"github.com/sodefrin/appengine-boilerplate/proto"
 	"go.uber.org/zap"
 )
 
@@ -21,6 +23,8 @@ func main() {
 		log.Logger.Error("failed", zap.Error(err))
 		os.Exit(exitError)
 	}
+
+	fmt.Println(proto.NewAppengineBoilerplateClient)
 
 	log.Logger.Info("stopped")
 	os.Exit(exitOK)

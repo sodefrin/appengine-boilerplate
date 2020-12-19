@@ -1,0 +1,28 @@
+main : github.com/sodefrin/appengine-boilerplate
+app : github.com/sodefrin/appengine-boilerplate/app
+controller : github.com/sodefrin/appengine-boilerplate/app/controller
+model : github.com/sodefrin/appengine-boilerplate/app/model/xo
+
+proto : github.com/sodefrin/appengine-boilerplate/proto
+proto : github.com/grpc-ecosystem/grpc-gateway/runtime
+proto : github.com/golang/protobuf/descriptor
+proto : github.com/golang/protobuf/proto
+proto : github.com/golang/protobuf/ptypes/empty
+proto : github.com/grpc-ecosystem/grpc-gateway/utilities
+proto : google.golang.org/genproto/googleapis/api/annotations
+proto : google.golang.org/grpc
+proto : google.golang.org/grpc/codes
+proto : google.golang.org/grpc/grpclog
+proto : google.golang.org/grpc/status
+
+util : github.com/sodefrin/appengine-boilerplate/log
+util : go.uber.org/zap
+
+main -> app
+app -> proto
+app -> controller
+controller -> proto
+
+main -> util
+app -> util
+controller -> util
